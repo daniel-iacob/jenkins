@@ -22,5 +22,12 @@ pipeline {
                 echo 'Deploying...'
             }
         }
+
+        stage('Upload Test Results') {
+            steps {
+                echo 'Uploading test results...'
+                junit 'results.xml'
+            }
+        }
     }
 }

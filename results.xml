@@ -1,0 +1,15 @@
+
+<testsuite name="ExampleTestSuite" tests="4" failures="2" errors="0" skipped="0" timestamp="2025-05-11T12:00:00" time="0.123">
+    <testcase classname="ExampleTest" name="testSuccess1" time="0.001"/>
+    <testcase classname="ExampleTest" name="testSuccess2" time="0.002"/>
+    <testcase classname="ExampleTest" name="testFailure1" time="0.003">
+        <failure message="AssertionError: Expected true but got false" type="AssertionError">
+            <![CDATA[Expected true but got false at ExampleTest.testFailure1(ExampleTest.java:25)]]>
+        </failure>
+    </testcase>
+    <testcase classname="ExampleTest" name="testFailure2" time="0.004">
+        <failure message="NullPointerException: Object was null" type="NullPointerException">
+            <![CDATA[NullPointerException at ExampleTest.testFailure2(ExampleTest.java:30)]]>
+        </failure>
+    </testcase>
+</testsuite>
