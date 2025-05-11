@@ -2,10 +2,6 @@
 pipeline {
     agent any
 
-    parameters {
-        booleanParam(name: 'SKIP_TEST', defaultValue: false, description: 'Skip the Test stage')
-    }
-
     stages {
         stage('Build') {
             steps {
@@ -27,6 +23,7 @@ pipeline {
             steps {
                 echo 'Uploading test results...'
                 junit 'results.xml'
+                rchiveArtifacts artifacts: 'results.xml', fingerprint: true
             }
         }
     }
