@@ -23,7 +23,7 @@ pipeline {
             steps {
                 echo 'Uploading test results...'
                 junit 'results.xml'
-                rchiveArtifacts artifacts: 'results.xml', fingerprint: true
+                archiveArtifacts artifacts: 'results.xml', fingerprint: true
             }
         }
     }
